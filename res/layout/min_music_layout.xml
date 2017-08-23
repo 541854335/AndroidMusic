@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@color/white"
+   
+    >
+
+    <ImageView
+        android:id="@+id/iv_music_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp" 
+        android:src="@drawable/default_disc_360"
+        />
+	<!-- 歌曲信息部分 -->
+	<LinearLayout 
+	     android:id="@+id/ll_nomusic"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+         android:gravity="center_vertical"
+         android:layout_marginLeft="10dp"
+	    >
+	    <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="请选择一首音乐"
+            android:textSize="20sp" />
+	</LinearLayout>
+	<LinearLayout 
+	    android:id="@+id/ll_muiscinfo"
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+         android:gravity="center_vertical"
+         android:visibility="gone"
+	    >
+	    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        >
+		
+        <TextView
+            android:id="@+id/tv_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:singleLine="true"
+           
+          
+            android:marqueeRepeatLimit="marquee_forever"
+           
+            android:focusableInTouchMode="true"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_music_artist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+               android:singleLine="true"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <CheckBox 
+        android:id="@+id/cb_music_play_pause"
+        android:button="@null"
+        android:background="@drawable/selector_play_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+	<ImageView
+	    android:clickable="true"
+	    android:id="@+id/iv_next"
+	    android:src="@drawable/playbar_btn_next"
+	    android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+	    />
+	</LinearLayout>
+    
+</LinearLayout>
